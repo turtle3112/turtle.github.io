@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="signin.js">
+    <script src="signin.js"></script>
+</head>
+<body>
+    <div id="box">
+        <form action="" id="form">
+            <h1 class="h1">Đăng nhập</h1>
+            <div class="form-div">
+                <i class="fa-solid fa-user"></i>
+                <input id="username" type="text" class="login" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-div">
+                <i class="fa-solid fa-lock"></i>
+                <input id="password" type="password" class="login" placeholder="Mật khẩu">
+            </div>
+            <input onclick="validateForm()" type="button" value="ĐĂNG NHẬP" class="submit">
+            <a href="signup.html"><input type="button" value="ĐĂNG KÝ" class="submit"></a>
+        </form>
+    </div>
+</body>
+</html>

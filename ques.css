@@ -1,0 +1,157 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 32, 147);
+    background-color:rgba(132, 190, 249, 1)
+}
+li{
+    float: left;
+}
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 50px;
+}
+/* .p{
+    size: 30px;
+    
+} */
+.nd{
+    margin-left: 50px;
+}
+.nd1{
+    margin-left: 600px;
+}
+.amenu:hover{
+    color: rgb(166, 247, 251);
+}
+.menu{
+    height: 50px;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    position: fixed;
+}
+
+body{
+    background-image: url(backques3.jpg);
+    background-repeat: no-repeat;
+    background-size: 1550px 730px;
+    margin-top: 50px;
+}
+.im{
+    position: relative;
+}
+.im1{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 235px;
+    margin-left: 20px;
+    position: absolute;
+}
+.ch1{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 200px;
+}
+
+.im2{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 393px;
+    margin-left: 20px;
+    position: absolute;
+}
+.ch2{
+    position: absolute;
+    margin-top: 430px;
+    margin-left: 200px;
+}
+
+.im3{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 550px;
+    margin-left: 20px;
+    position: absolute;
+}
+.ch3{
+    position: absolute;
+    margin-top: 590px;
+    margin-left: 200px;
+}
+
+.ch{
+    font-size: 30px;
+    color: white;
+}
+.ch1:hover{
+    color: orange;
+}
+.ch2:hover{
+    color: rgb(66, 66, 246);
+}
+.ch3:hover{
+    color: rgb(252, 208, 126);
+}
+
+.im0{
+    position: relative;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 75px;
+    margin-left: 20px;
+    position: absolute;
+}
+.a{
+    margin-left: 200px;
+    margin-top: 100px;
+    color: white;
+    position: absolute;
+}
+.a1{
+    margin-top: 75px;
+    width: 1000px;
+}
+.a2{
+    margin-top: 110px;
+    font-size: 20px;
+    width: 1000px;
+}
+.a3{
+    margin-top: 150px;
+    font-size: 20px;
+    width: 1000px;
+}
+
+.b{
+    position: relative;
+}
+.b1{
+    position: absolute;
+}
+
+.c0{
+    margin-top: 200px;
+    margin-left: 750px;
+    position: absolute;
+}
+.c1{
+    font-size: 70px;
+}
+.c2{
+    font-size: 60px;
+}

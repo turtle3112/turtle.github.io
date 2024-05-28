@@ -1,0 +1,78 @@
+jssignin
+
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Lấy danh sách người dùng từ localStorage
+  var savedUsers = localStorage.getItem("users");
+  if (savedUsers) {
+    var users = JSON.parse(savedUsers);
+    // Tìm kiếm người dùng theo tên đăng nhập
+    var foundUser = users.find(user => user.username === username);
+    if (foundUser) {
+      // Kiểm tra mật khẩu
+      if (password.length < 8) {
+        alert("Mật khẩu phải có ít nhất 8 ký tự.");
+      } else if (foundUser.password === password) {
+        alert("Đăng nhập thành công!");
+      } else {
+        alert("Mật khẩu không đúng.");
+      }
+    } else {
+      alert("Tài khoản không tồn tại.");
+    }
+  } else {
+    alert("Chưa có tài khoản nào được đăng ký.");
+  }
+}
+
+
+signup
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    // var password1 = document.getElementById("password1").value;
+
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    localStorage.setItem("password1", password);
+
+    alert("Đăng kí thành công!");
+});
+
+function signUp() {
+    // var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var password1 = document.getElementById("password1").value;
+  
+    if (password.length < 8) {
+        alert("Mật khẩu phải dài hơn 8 ký tự");
+        return;
+    }
+  
+    if (password !== password1) {
+        alert("Mật khẩu nhập lại không khớp");
+        return;
+    }
+  
+    if (password.length === 8 || password === password1) {
+        alert("Đăng ký thành công");
+        window.location.href = "signin.html";
+        
+    }
+  
+    // // Tạo đối tượng JSON
+    // var user = {
+    //     username: username,
+    //     password: password
+    // };
+  
+    // // Lưu đối tượng JSON vào cơ sở dữ liệu hoặc gửi đi qua Ajax
+    // console.log("Đăng ký thành công:", user);
+  
+    // Chuyển hướng về trang signin.html
+    window.location.href = "signin.html";
+  }

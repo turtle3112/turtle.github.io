@@ -1,0 +1,79 @@
+jssubmit
+var questionList = [];
+
+        function addQuestion() {
+            var questionType = document.getElementById("questionType").value;
+            var question = document.getElementById("question").value;
+            var answer = document.getElementById("answer").value;
+            var correctAnswer = document.getElementById("correctAnswer").value;
+
+            var newQuestion = {
+                questionType: questionType,
+                question: question,
+                answer: answer,
+                correctAnswer: correctAnswer,
+                status: "Chờ duyệt"
+            };
+
+            questionList.push(newQuestion);
+
+            displayQuestionList();
+            clearForm();
+        }
+
+        function displayQuestionList() {
+            var questionTableBody = document.getElementById("questionTableBody");
+            questionTableBody.innerHTML = "";
+
+            for (var i = 0; i < questionList.length; i++) {
+                var question = questionList[i];
+
+                var row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${getCurrentTime()}</td>
+                    <td>${question.question}</td>
+                    <td>${question.answer}</td>
+                    <td>${question.correctAnswer}</td>
+                    <td>${question.status}</td>
+                    <td>
+                        <button onclick="editQuestion(${i})">Sửa</button>
+                        <button onclick="deleteQuestion(${i})">Xóa</button>
+                    </td>
+                `;
+
+                questionTableBody.appendChild(row);
+            }
+        }
+
+        function editQuestion(index) {
+            var question = questionList[index];
+
+            document.getElementById("questionType").value = question.questionType;
+            document.getElementById("question").value = question.question;
+            document.getElementById("answer").value = question.answer;
+            document.getElementById("correctAnswer").value = question.correctAnswer;
+
+            questionList.splice(index, 1);
+
+            displayQuestionList();
+        }
+
+        function deleteQuestion(index) {
+            questionList.splice(index, 1);
+
+            displayQuestionList();
+        }
+
+        function clearForm() {
+            document.getElementById("questionForm").reset();
+        }
+
+        function getCurrentTime() {
+            var now = new Date();
+            var timeString = now.toLocaleString();
+
+            return timeString;
+        }
+
+        displayQuestionList();

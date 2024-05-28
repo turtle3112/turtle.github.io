@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>E-learning</title>
+    <link rel="stylesheet" href="submit1.css">
+    <link rel="stylesheet" href="submit1.js">
+    <script src="submit1.js"></script>
+</head>
+<body>
+    <!--menu-->
+    <div class="menu">
+        <ul class="main-menu">
+            <li class="nd nd1"><a href="index.html" class="amenu"><p class="e">Home</p></a></li>
+            <li class="nd nd2"><a href="submit.html" class="amenu"><p class="e">Question</p></a></li>
+            <li class="nd nd3"><a href="signin.html" class="amenu"><p class="e">Log out</p></a></li>
+        </ul>
+    </div>
+    <h1>Chọn loại câu hỏi</h1>
+
+    <div class="g">
+    <form id="questionForm" class="f">
+        <div class="d">
+        
+        <label for="question"></label>
+        <input type="text" id="question" placeholder="Nhập câu hỏi"><br>
+
+        <label for="answer"></label>
+        <input type="text" id="answer" placeholder="Đáp án"><br>
+        <input type="text" id="answer" placeholder="Đáp án"><br>
+        <input type="text" id="answer" placeholder="Đáp án"><br>
+        <input type="text" id="answer" placeholder="Đáp án"><br>
+        </div>
+
+        <div class="h">
+            <label for="questionType" ></label>
+            <select id="questionType" class="f1">
+                <option value="singleChoice">Trắc nghiệm một lựa chọn</option>
+                <option value="multipleChoice">Trắc nghiệm nhiều lựa chọn</option>
+                <option value="text">Câu hỏi tự do</option>
+            </select><br>
+            <label for="correctAnswer"></label>
+            <input type="text" id="correctAnswer" placeholder="Nhập đáp án đúng"><br>
+
+            <button type="button" onclick="addQuestion()">Gửi câu hỏi</button>
+        </div>
+    </form>
+    </div>
+
+    <h1>Danh sách câu hỏi</h1>
+    <table id="questionList" class="f" cellpadding="15" cellspacing="0">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Thời gian gửi</th>
+                <th>Câu hỏi</th>
+                <th>Đáp án</th>
+                <th>Đáp án đúng</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="questionTableBody">
+            <!-- Các dòng câu hỏi sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+</body>
+</html>
